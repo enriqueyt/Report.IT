@@ -130,6 +130,14 @@ fieldset[disabled] .btn-primary.active {
     
 }
 
+.bgOrange{
+    background-color: #DD5A00; 
+}
+
+.bgOrange:active{
+    background-color: #DD5A00; 
+}
+
 .bgGreen{
     background-color: #689F2A;
 }
@@ -254,7 +262,6 @@ fieldset[disabled] .btn-xl.active {
 
 @media(min-width:768px) {
     .navbar-default {
-        padding: 10px 0;
         border: 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
@@ -273,12 +280,12 @@ fieldset[disabled] .btn-xl.active {
     }
 
     .navbar-default.navbar-shrink {
-        padding: 10px 0;
-        /*background-color: #DD5A00;*/
+       /* padding: 10px 0;
+        background-color: #DD5A00;*/
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
+        /*font-size: 1.5em;*/
     }
 }
 
@@ -306,12 +313,12 @@ header, .sec-light {
 
 .contentBlue{
     text-align: center;
-    border: solid 1px #0E7AC4;
+    border: solid 3px #DD5A00 ;
     cursor: pointer;
 }
 
 .contentBlue h2{
-    color:#0E7AC4;
+    color:#DD5A00 ;
 }
 
 
@@ -387,7 +394,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 150px 0;
+        padding: 120px 0;
     }
 }
 /**/
@@ -751,7 +758,7 @@ aside.clients img {
 
 section#contact {
     background-color: #222;
-    background-image: url(../img/map-image.png);
+    /*background-image: url(../img/map-image.png);*/
     background-position: center;
     background-repeat: no-repeat;
 }
