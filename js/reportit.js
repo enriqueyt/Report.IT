@@ -1,5 +1,5 @@
 
-
+var contentModal
 $(function() {
     $('a.page-scroll').on('click', function(event) {
         var $anchor = $(this);
@@ -7,6 +7,29 @@ $(function() {
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
+    });
+
+    $('div.imgInicio').on('click', function(){
+
+    contentModal =  $('.modal-body', $('div#'+($(this).attr('data-target')).substring(1,($(this).attr('data-target')).length)));
+
+    contentModal
+    .empty()
+    .append(
+        '<div class="row">'+
+            '<div class="col-md-12">'+
+                '<video width="100%" controls>'+
+                  '<source src="video/Report_cut.mp4" type="video/mp4">'+
+                  'Tu navegador no soporta videos.'+
+                '</video>'+
+            '<div class="row">'+
+        '</div>'
+    );
+
+    });
+
+    $('#myModal').on('hidden.bs.modal', function (e) {
+      contentModal.empty()
     });
 
     var difundeComparte = [
@@ -54,7 +77,7 @@ $(function() {
     		'<div class="col-md-6" style="">'+
                 '<div class="col-md-6" >'+
                      '<div class="timeline-image">'+
-                        '<img class="img-circle img-responsive" src="'+difundeComparte[i].img+'" alt="">'+
+                        '<img class="img-circle img-responsive" src="'+difundeComparte[i].img+'" alt=""/>'+
                     '</div>'+
                 '</div>'+
                 '<div class="col-md-6">'+
@@ -71,7 +94,7 @@ $(function() {
             '</div>'
     }
 
-    $('#comoFunciona .row:eq(1)').append(html);
+    $('#comoFunciona .row:eq(1)').append('<div class="col-md-12">'+ html + '</div>');
 
 });
 
